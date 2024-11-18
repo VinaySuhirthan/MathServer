@@ -165,11 +165,11 @@ def powerlamp(request):
 
 ## SERVER SIDE PROCESSING:
 
-![alt text](<../Screenshot 2024-11-18 150343.png>)
+![alt text](<Screenshot 2024-11-18 150414-1.png>)
 
 ## HOMEPAGE:
 
-![alt text](<../Screenshot 2024-11-18 150414.png>)
+![alt text](<Screenshot 2024-11-18 150343-1.png>)
 
 ## RESULT:
 The program for performing server side processing is completed successfully.
