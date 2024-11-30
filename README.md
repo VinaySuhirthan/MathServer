@@ -141,26 +141,14 @@ def powerlamp(request):
 ## urls.py
 
 ```
-from django.shortcuts import render
-
-def powerlamp(request):
-    context={}
-    context['Power'] = ""
-    context['I'] = ""
-    context['R'] = ""
-    if request.method == 'POST':
-        print("POST method is used")
-        I = request.POST.get('Intensity','')
-        R = request.POST.get('Resistence','')
-        print('request=',request)
-        print('Intensity=',I)
-        print('Resistence=',R)
-        Power = int(I) * int(I) * int(R)
-        context['Power'] = Power
-        context['I'] = I
-        context['R'] = R
-        print('Power=',Power)
-    return render(request,'calci.html',context)
+from django.contrib import admin
+from django.urls import path
+from mathsapp import views
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('PowerOfLampFilamentInAnIncandescentBulb/',views.powerlamp,name="PowerOfLampFilamentInAnIncandescentBulb"),
+    path('',views.powerlamp,name="PowerOfLampFilamentInAnIncandescentBulb")
+]
 ```
 
 ## SERVER SIDE PROCESSING:
